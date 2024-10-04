@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'MinionPro';
+    src: url('fonts/MinionPro-Semibold.ttf') format('truetype'); /* Путь к файлу шрифта */
+}
+@font-face {
+    font-family: 'MinionProBold';
+    src: url('fonts/MinionPro-Bold.ttf') format('truetype'); /* Путь к файлу шрифта */
+}
+@font-face {
+    font-family: 'Dobra';
+    src: url('fonts/Dobra-BoldItalic.ttf') format('truetype'); /* Путь к файлу шрифта */
+}
+
+body {
+    font-family:'Dobra' ;
+    background-color: #333;
+    color: white;
+    background-image: url('images/back.png'); /* Это фоновое изображение */
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.image-container {
+    text-align: center; /* Центрируем изображение внутри контейнера */
+    margin: 60px 0;
+}
+
+
+img {
+    width: 300px; /* Устанавливаем ширину изображения */
+    height: auto; /* Сохраняем пропорции изображения */
+    border-radius: 10px; /* Закругляем углы */
+}
+
+.fio-label {
+    font-family: 'MinionProBold', sans-serif;
+    font-size: 24px;
+    color: #a0442e;
+    margin: 20px 0;
+}
+
+.underline {
+    border-bottom: 1px solid #a0442e;
+    display: inline-block;
+    width: 300px;
+}
+input[type="text"] {
+    width: 250px; /* Фиксированная ширина поля ввода */
+    border: none; /* Убираем границы */
+    background: transparent; /* Прозрачный фон */
+    border-bottom: 3px solid #a0442e; /* Линия под текстом для ввода */
+    color: white; /* Цвет текста */
+    font-size: 14px;
+    font-family: 'MinionPro', sans-serif;
+    margin-left: 10px; /* Небольшой отступ от текста "ФИО Детектива" */
+    outline: none; /* Убираем стандартные обводки при фокусе */
+}
+
+.rulesimage {
+    margin-top: 40px;
+}
+
+.rules-list {
+    font-family: 'MinionPro', sans-serif;
+    list-style: square;
+    text-align: left;
+    margin-bottom: 40px;
+
+}
+
+.rules-list li {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.highlight {
+    color: #a0442e;
+    font-family: 'MinionProBold', sans-serif;
+}
+
+.badges-title {
+    font-size: 36px;
+    color: #00FF00;
+    margin: 20px 0;
+}
+
+.badges-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Две колонки */
+    grid-column-gap: 30px ;
+    justify-items:baseline;
+    align-items: center;
+    margin-left: -15px;
+}
+
+.badge {
+    display: flex;
+    align-items:center; /* Центрирование по вертикали */
+    margin-bottom: 15px; /* Отступ между строками значков */
+}
+.badge-wave {
+    display:flex;
+    align-items:center; /* Центрирование по вертикали */
+    padding-left: 110px;
+}
+
+.text-purple  {
+    font-family: 'MinionProBold';
+    font-size: 16px;
+    color: #6b5fa7;
+    text-align: left;
+}
+.text-red  {
+    font-family: 'MinionProBold';
+    font-size: 16px;
+    color: #ad5e71;
+    text-align: left;
+}
+.text-blue  {
+    font-family: 'MinionProBold';
+    font-size: 16px;
+    color: #72b0c5;
+    text-align: left;
+}
+.text-yellow  {
+    font-family: 'MinionProBold';
+    font-size: 16px;
+    color: #dbb457;
+    text-align: left;
+}
+
+.custom-checkbox {
+    position:relative;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.custom-checkbox input {
+    position: absolute;
+    opacity: 0; /* Скрываем стандартный чекбокс */
+    cursor: pointer;
+}
+
+.custom-checkbox .checkmark {
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border: 2px solid #000000;
+    display: inline-block;
+    position: relative;
+}
+
+.custom-checkbox input:checked + .checkmark {
+    background-color: transparent;
+    border-color: #a0442e;
+}
+
+.custom-checkbox .checkmark::after {
+    content: '';
+    position: absolute;
+    display: none;
+    left: 9px;
+    width: 10px;
+    height: 20px;
+    border: solid white;
+    border-width: 0 4px 4px 0;
+    transform: rotate(45deg);
+}
+
+.custom-checkbox input:checked + .checkmark::after {
+    display: block;
+}
+
+/* Медиа-запрос для устройств с маленькими экранами */
+@media (max-width: 600px) {
+    .badge p {
+        font-size: 1rem; /* Уменьшаем текст на маленьких экранах */
+    }
+
+    h1 {
+        font-size: 2rem; /* Уменьшаем заголовок на мобильных устройствах */
+    }
+
+    .container {
+        padding: 10px; /* Уменьшаем внутренние отступы */
+    }
+}
