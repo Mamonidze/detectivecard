@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detective Card</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="titleimage">
+            <img src="/images/detective card.png" alt="Описание изображения">
+        </div>
+        <p class="fio-label">ФИО Детектива: <form> <input type="text" id="fio" name="fio" placeholder="Введите ФИО"></form></p>
+        
+        <div class="rulesimage">
+            <img src="/images/ruled.png" alt="Описание изображения">
+        </div>
+        <ul class="rules-list">
+            <li>Выполняйте задания, чтобы получать <span class="highlight">Значки</span>.</li>
+            <li>Используйте Значки, чтобы получать <span class="highlight">Подсказки</span> у Управляющего.</li>
+            <li>Первая Подсказка выдается за <span class="highlight">3 Значка</span>; <br>Вторая Подсказка — за <span class="highlight">6 Значков.</span></li>
+            <li>С помощью Подсказок найдите все <span class="highlight">Улики</span> и разгадайте дело!</li>
+            <br>
+            <li>Задания можно проходить в любом порядке.</li>
+        </ul>
+
+        <div class="signsimage">
+            <img src="/images/signs.png" alt="Описание изображения">
+        </div>
+        <div class="badges-container">
+            <div class="badge">
+                
+                <label class="custom-checkbox">
+                    <input type="checkbox" class="badge-checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <p class="text-yellow">Самообладание</p>
+            </div>
+            <div class="badge">
+                
+                <label class="custom-checkbox">
+                    <input type="checkbox" class="badge-checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <p class="text-blue">Драма</p>
+            </div>
+            <div class="badge">
+                
+                <label class="custom-checkbox">
+                    <input type="checkbox" class="badge-checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <p class="text-yellow">Эквилибристика</p>
+            </div>
+            
+            <div class="badge">
+                
+                <label class="custom-checkbox">
+                    <input type="checkbox" class="badge-checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <p class="text-blue">Энциклопедия</p>
+            </div>
+            <div class="badge">
+                
+                <label class="custom-checkbox">
+                    <input type="checkbox" class="badge-checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <p class="text-red">Грубая сила</p>
+            </div>
+            <div class="badge">
+                
+                <label class="custom-checkbox">
+                    <input type="checkbox" class="badge-checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <p class="text-purple">Авторитет</p>
+            </div>
+            <div class="badge">
+                
+                <label class="custom-checkbox" class="badge-checkbox">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <p class="text-red">Электрохимия</p>
+            </div>
+            <div class="badge">
+                
+                <label class="custom-checkbox" class="badge-checkbox">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <p class="text-purple">Эмпатия</p>
+            </div>
+        </div>
+    </div>
+    <div class="badge-wave">
+        <label class="custom-checkbox" class="badge-checkbox">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+        </label>
+        <p class="text-purple">Полицейская волна</p>
+
+        <script src="script.js"></script>
+</body>
+</html>
